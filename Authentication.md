@@ -149,9 +149,12 @@ Client → Game Host:
   news\x00\x00\x00\x00\x00\x00\x00\x13
   NAME=7\x00                             ← requests MOTD for region 7
 ```
-
-`ADDR` is the client's own LAN IP. `PORT` is the local port of this TCP connection.  
-`SKEY=$5075626c6963204b6579` is always this value — the game doesn't do real asymmetric crypto.
+| Field | Meaning |
+|-------|---------|
+| `ADDR` | Client's own LAN IP Address |
+| `PORT` |  Port of this TCP connection — always `9900` |
+| `SKEY` | Security key — always `$5075626c6963204b6579`  the game doesn't do real asymmetric crypto. |
+| `NAME` | Region ID for Message of the Day |
 
 ### `~png` — game host ping
 
